@@ -1,11 +1,12 @@
 {
-  "name": "api",
+  "name": "crud-task-back",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "build": "echo 'Build script placeholder'"
   },
   "keywords": [],
   "author": "",
