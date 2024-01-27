@@ -13,9 +13,7 @@ app.use(express.json())
 
 app.use('/task', require('./src/routes/index'))
 
-app.use((req, res) => {
-  res.status(404).send('Not Found')
-})
+
 
 app.listen(PORT, () => {
   console.log(`server listening on port http://localhost:${PORT}`)
