@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
-const PORT = process.env.PORT ?? 8080
+const PORT = process.env.PORT ?? 3000
 // eslint-disable-next-line no-unused-vars
 const archivoDB = require('./src/db')
 
@@ -12,6 +12,10 @@ app.use(morgan('dev'))
 app.use(express.json())
 
 app.use('/task', require('./src/routes/index'))
+
+app.use((req, res) => {
+  res.status(404).send('Not Found')
+})
 
 app.listen(PORT, () => {
   console.log(`server listening on port http://localhost:${PORT}`)
