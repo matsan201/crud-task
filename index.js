@@ -1,6 +1,5 @@
 const express = require('express')
 const cors = require('cors')
-const configCors = require('./src/config/cors.config')
 const morgan = require('morgan')
 const PORT = process.env.PORT ?? 3000
 // eslint-disable-next-line no-unused-vars
@@ -8,7 +7,7 @@ const archivoDB = require('./src/db')
 
 const app = express()
 // eslint-disable-next-line no-undef
-app.use(cors(configCors))
+app.use(cors())
 app.use(morgan('dev'))
 app.use(express.json())
 
