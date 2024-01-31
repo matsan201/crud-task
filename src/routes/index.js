@@ -1,4 +1,3 @@
-/* eslint-disable no-new */
 const { Router } = require('express')
 const router = Router()
 const { getAllTasks, getTaskByID, createTask, updatedTask, deleteTask } = require('../handlers/index')
